@@ -1,4 +1,4 @@
-package com.aion8.treeports.screens.auth
+package com.aion8.treeports.persentation.auth
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable

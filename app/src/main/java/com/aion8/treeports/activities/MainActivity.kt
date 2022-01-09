@@ -1,4 +1,4 @@
-package com.aion8.treeports
+package com.aion8.treeports.activities
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,13 +7,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.aion8.treeports.navigation.nav_graph.RootNavGraph
+import com.aion8.treeports.navigation.main.MainNavGraph
 import com.aion8.treeports.ui.theme.TreePortsTheme
 
 class MainActivity : ComponentActivity() {
@@ -38,15 +37,15 @@ fun MainAppEntry() {
         modifier = Modifier.fillMaxSize(),
     ) {
         val navController = rememberNavController()
-        SetupNavGraph(navController = navController)
+        SetupMainNavGraph(navController = navController)
     }
 }
 
 @Composable
-fun SetupNavGraph(
+fun SetupMainNavGraph(
     navController: NavHostController
 ){
-    RootNavGraph(navController = navController)
+    MainNavGraph(navController = navController)
 }
 
 @Preview(showBackground = true)

@@ -1,4 +1,4 @@
-package com.aion8.treeports.navigation
+package com.aion8.treeports.navigation.auth
 
 
 val AUTH_ROUTE = "authentication"

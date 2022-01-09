@@ -1,11 +1,10 @@
-package com.aion8.treeports.screens.auth
+package com.aion8.treeports.persentation.main
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 
-
 @Composable
-fun ForgotPasswordScreen(
+fun ProfileScreen(
     navController: NavHostController
 ){
 
