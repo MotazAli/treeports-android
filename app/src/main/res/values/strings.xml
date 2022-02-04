@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TreePorts</string>
+
+    <string name="onboarding_first_page_description">onboarding first page description</string>
+    <string name="onboarding_second_page_description">onboarding second page description</string>
+    <string name="onboarding_last_page_description">onboarding last page description</string>
+    <string name="start">Start</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
 </resources>

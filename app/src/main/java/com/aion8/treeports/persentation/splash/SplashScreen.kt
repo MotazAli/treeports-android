@@ -18,8 +18,11 @@ import androidx.navigation.compose.rememberNavController
 import com.aion8.treeports.R
 import com.aion8.treeports.activities.AuthActivity
 import com.aion8.treeports.activities.SplashActivity
+import com.aion8.treeports.navigation.splash.SplashScreens
+import com.google.accompanist.pager.ExperimentalPagerApi
 import kotlinx.coroutines.delay
 
+@ExperimentalPagerApi
 @Composable
 fun SplashScreen(
     navController: NavHostController
@@ -29,12 +32,16 @@ fun SplashScreen(
     val activity  = (LocalContext.current as? SplashActivity)
     LaunchedEffect(key1 = true){
         delay(5000)
-        activity?.let {
-            Intent(it , AuthActivity::class.java).apply {
-                it.startActivity(this)
-                it.finish()
-            }
-        }
+
+        navController.popBackStack()
+        navController.navigate(route = SplashScreens.WelcomeOnboarding.route)
+
+//        activity?.let {
+//            Intent(it , AuthActivity::class.java).apply {
+//                it.startActivity(this)
+//                it.finish()
+//            }
+//        }
 
     }
     
@@ -52,7 +59,7 @@ fun SplashScreen(
 }
 
 
-
+@ExperimentalPagerApi
 @Composable
 @Preview
 fun SplashScreenPreview(){

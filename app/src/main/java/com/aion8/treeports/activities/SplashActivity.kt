@@ -9,7 +9,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.aion8.treeports.navigation.splash.SplashNavGraph
 import com.aion8.treeports.ui.theme.TreePortsTheme
+import com.google.accompanist.pager.ExperimentalPagerApi
 
+@ExperimentalPagerApi
 class SplashActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +35,7 @@ class SplashActivity : ComponentActivity() {
 
 
 
+@ExperimentalPagerApi
 @Composable
 fun SetupSplashNavGraph(
     navController: NavHostController
